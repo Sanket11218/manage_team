@@ -1,4 +1,4 @@
-var Api = "http://127.0.0.1:8025/";
+var Api = "http://127.0.0.1:8026/";
 
 
 function method_call_post(end_point,data){
