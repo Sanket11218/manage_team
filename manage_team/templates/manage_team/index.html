@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+      <script src="{% static 'manage_team/script.js' %}">
+
+      </script>
+  <title>Game App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+</head>
+<body class="container">
+
+  <div id = "nav-placeholder">
+  </div>
+
+  <div class="jumbotron">
+        <h2 class="display-2">LeaderBoard</h2>
+    </div>
+
+  <div class="form-group">
+        <label class="mdb-main-label">Choose Game :</label>
+          <select id = "select_game" class="mdb-select md-form colorful-select dropdown-primary" onchange="get_leaderboard();">
+          </select>
+  </div>
+
+  <div class="container">
+  <table id = "table_data" class="table">
+  </table>
+</div>
+
+
+</body>
+</html>
+
+<script>
+      window.onload = nav_include();
+      window.onload = set_game_option();
+      window.onload = get_leaderboard();
+
+</script>

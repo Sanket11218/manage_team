@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      {% load static %}
+      <script src="{% static 'manage_team/script.js' %}"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+    <meta charset="utf-8">
+  <title>Create Game</title>
+  </head>
+  <body class="container">
+  <div id = "nav-placeholder">
+  </div>
+
+    <div class="jumbotron">
+        <h2 class="display-2">Create Game</h2>
+    </div>
+
+    <form class = "container" onsubmit="return create_game()">
+      <div class="form-group">
+        <label for="game_name">Game Name</label>
+        <input type="text" class="form-control" id="game_name"  placeholder="Game Name">
+      </div>
+
+      <div class="form-group">
+        <label for="max_teams">Maximum Teams</label>
+        <input type="number" min="2" class="form-control" id="max_teams" oninput="validity.valid||(value='');">
+      </div>
+
+     <div class="form-group">
+        <label for="win_points">Winning Points</label>
+        <input type="number" min="5" class="form-control" id="win_points" oninput="validity.valid||(value='');">
+      </div>
+
+
+      <div class="form-group">
+        <label for="game_desc">Game Description</label>
+        <input type="textarea" class="form-control" id="game_desc"  placeholder="Game Description">
+      </div>
+
+
+      <button type="submit" class="btn btn-primary ">Submit</button>
+    </form>
+
+  </body>
+</html>
+
+<script>
+      window.onload = nav_include();
+
+</script>

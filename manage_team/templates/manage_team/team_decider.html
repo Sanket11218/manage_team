@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      {% load static %}
+      <script src="{% static 'manage_team/script.js' %}">
+
+      </script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+    <meta charset="utf-8">
+  <title>Team Decider</title>
+  </head>
+  <body class="container">
+    <div id = "nav-placeholder">
+   </div>
+
+    <div class="jumbotron">
+        <h2 class="display-2">Decide Winner</h2>
+    </div>
+
+    <form class = "container" onsubmit="return winning_submit()">
+
+    <div class="form-group">
+        <label class="mdb-main-label">Choose Game :</label>
+          <select id = "select_game" class="mdb-select md-form colorful-select dropdown-primary" onchange="select_team_option();select_winning_teams()">
+          </select>
+    </div>
+
+
+     <div class="form-group">
+        <label class="mdb-main-label">Team 1:</label>
+          <select id = "team_1" class="mdb-select md-form colorful-select dropdown-primary" onchange="select_winning_teams()" >
+          </select>
+
+      </div>
+
+
+    <div class="form-group">
+        <label class="mdb-main-label">Team 2:</label>
+          <select id = "team_2" class="mdb-select md-form colorful-select dropdown-primary" onchange="select_winning_teams()">
+          </select>
+
+      </div>
+
+    <div class="form-group">
+        <label class="mdb-main-label">Winning Team:</label>
+          <select id = "winning_team" class="mdb-select md-form colorful-select dropdown-primary" >
+          </select>
+
+      </div>
+
+
+
+
+      <button type="submit" class="btn btn-primary ">Submit</button>
+    </form>
+
+  </body>
+</html>
+
+<script>
+      window.onload = set_game_option();
+      window.onload = select_team_option();
+      window.onload = select_winning_teams();
+      window.onload = nav_include();
+
+</script>

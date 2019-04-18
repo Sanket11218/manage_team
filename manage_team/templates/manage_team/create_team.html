@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      {% load static %}
+      <script src="{% static 'manage_team/script.js' %}">
+
+      </script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+
+    <meta charset="utf-8">
+  <title>Create Team</title>
+  </head>
+  <body class="container">
+    <div id = "nav-placeholder">
+    </div>
+
+    <div class="jumbotron">
+        <h2 class="display-2">Create Team</h2>
+    </div>
+
+    <form class = "container" onsubmit="return team_submit()">
+
+    <div class="form-group">
+        <label for="alias">Team Name</label>
+        <input type="text" class="form-control" id="team_name"  placeholder="Enter Team Name">
+    </div>
+
+     <div class="form-group">
+        <label class="mdb-main-label">Choose Game :</label>
+          <select id = "select_game" class="mdb-select md-form colorful-select dropdown-primary" onchange="set_player_option()">
+          </select>
+
+      </div>
+
+
+     <div class="form-group">
+        <label class="mdb-main-label">Choose Player 1 :</label>
+          <select id = "select_player_1" class="mdb-select md-form colorful-select dropdown-primary" >
+          </select>
+
+      </div>
+
+
+      <div class="form-group">
+        <label class="mdb-main-label">Choose Player 2 :</label>
+          <select id = "select_player_2" class="mdb-select md-form colorful-select dropdown-primary" >
+          </select>
+
+      </div>
+
+
+
+
+      <button type="submit" class="btn btn-primary ">Submit</button>
+    </form>
+
+  </body>
+</html>
+
+<script>
+      window.onload = set_game_option();
+      window.onload = set_player_option();
+      window.onload = nav_include();
+</script>

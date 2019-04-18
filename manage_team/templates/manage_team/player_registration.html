@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      {% load static %}
+      <script src="{% static 'manage_team/script.js' %}"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+    <meta charset="utf-8">
+  <title>Player Registration</title>
+  </head>
+  <body class="container">
+  <div id = "nav-placeholder">
+  </div>
+
+    <div class="jumbotron">
+        <h2 class="display-2">Player Registration</h2>
+    </div>
+
+    <form class = "container" onsubmit="return player_register()">
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input type="text" class="form-control" id="first_name"  placeholder="First Name">
+      </div>
+
+      <div class="form-group">
+        <label for="InputEmail1">Email address</label>
+        <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+
+      <div class="form-group">
+        <label for="age">Enter Age</label>
+        <input type="number" min="15" class="form-control" id="age" oninput="validity.valid||(value='');">
+      </div>
+
+
+      <div class="form-group">
+        <label for="alias">Alias</label>
+        <input type="text" class="form-control" id="alias"  placeholder="Alias">
+      </div>
+
+
+      <button type="submit" class="btn btn-primary ">Submit</button>
+    </form>
+
+  </body>
+</html>
+
+<script>
+      window.onload = nav_include();
+
+</script>
